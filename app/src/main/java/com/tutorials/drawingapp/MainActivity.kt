@@ -75,9 +75,14 @@ class MainActivity : AppCompatActivity() {
             ContextCompat.getDrawable(this, R.drawable.pallet_pressed)
         )
 
-        val ib_brush: ImageButton = findViewById(R.id.ib_brush)
-        ib_brush.setOnClickListener {
+        val ibBrush: ImageButton = findViewById(R.id.ib_brush)
+        ibBrush.setOnClickListener {
             showBrushSizeChooserDialog()
+        }
+
+        val ibUndo: ImageButton = findViewById(R.id.ib_undo)
+        ibUndo.setOnClickListener {
+            drawingView?.onClickUndo()
         }
 
         val ibGallery : ImageButton = findViewById(R.id.ib_gallery)
